@@ -1,0 +1,593 @@
+/*Настраиваем html страницу*/
+/*Сбрасываем стили*/
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #ffff;
+  font-size: 62.5%;
+  /*Делаем основную единицу измерения для сайта REM , 1rem = 10px*/
+  font-weight: normal;
+  background: #FFFFFF;
+}
+
+/*Подготавлеваем картинки*/
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /*Картинка будет сохранять все соотношения сторон,
+  при этом не будет терять пропорции и растягиваться*/
+  flex-shrink: 0;
+  /*Сдерживание сжатие картинки*/
+}
+
+/*Настраиваем ссылки для дальнейшего использования*/
+a {
+  text-decoration: none;
+}
+
+hr {
+  width: 100%;
+  opacity: 0.3;
+}
+
+span {
+  padding-left: 6rem;
+}
+
+
+button,
+input {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  /*При наведении курсор будет в виде пальца*/
+}
+
+/*Сбрасываем стили для заголовков*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+.conteiner {
+  width: 130rem;
+  margin: 0 auto;
+}
+
+:root {
+  --text--size-medium: 1.6rem;
+  /*Объявляем переменную CSS*/
+}
+
+.block__center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+/*Конец настройки сайта*/
+
+/*Стилизуем header*/
+
+header {
+  display: flex;
+  width: 100%;
+  margin-bottom: 11rem;
+  margin-top: 5.2rem;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu__elements {
+  margin-left: 40rem;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+  color: #021206;
+  opacity: 0.5;
+}
+
+.menu__elements a:not(:last-child) {
+  padding-right: 5.3rem;
+}
+
+.button__menu1 {
+  margin-left: 22.1rem;
+  margin-right: 2.3rem;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+  color: #021206;
+  opacity: 0.7;
+}
+
+.button__menu2 {
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+  padding: 1.5rem 3.0rem;
+  background: #F44545;
+  border-radius: 6px;
+  width: 12.9rem;
+  height: 5.7rem;
+}
+
+/*Стилизуем main*/
+
+.main__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-left: 22.6rem;
+  margin-right: 5.268rem;
+  margin-bottom: 12rem;
+}
+
+.main__elements {
+  width: 510px;
+  height: 40.389rem;
+  margin-right: 6.47rem;
+}
+
+.main-header {
+  width: 100%;
+  height: 15rem;
+  font-weight: 600;
+  font-size: 5.4rem;
+  line-height: 8.1rem;
+  color: #021206;
+  margin-bottom: 2.54rem;
+}
+
+.main-subheader {
+  width: 50.9rem;
+  height: 6.8rem;
+  font-weight: 400;
+  font-size: 2.1rem;
+  line-height: 160%;
+  color: #021206;
+  opacity: 0.7;
+  margin-bottom: 3rem;
+}
+
+input {
+  width: 100%;
+  font-size: 1.8rem;
+  padding-left: 2.4rem;
+}
+
+input::placeholder {
+  width: 14.6rem;
+  height: 2.7rem;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+  color: #021206;
+  opacity: 0.5;
+  padding-top: 1.9rem;
+  padding-bottom: 1.9rem;
+  padding-left: 2.4rem;
+}
+
+.main__email-box {
+  display: flex;
+  justify-content: space-between;
+  width: 47.2rem;
+  height: 6.5rem;
+  background: #FFFFFF;
+  border-radius: 0.6rem;
+  filter: drop-shadow(-5px 5px 45px rgba(2, 18, 6, 0.15));
+  margin-bottom: 3.547rem;
+}
+
+.main__bottom-img {
+  width: 30.599rem;
+  height: 3.002rem;
+}
+
+.button__main {
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
+  margin-right: 0.6rem;
+  font-weight: 500;
+  font-size: 2.1rem;
+  line-height: 3.2rem;
+  background: #F44545;
+  border-radius: 6px;
+  width: 12rem;
+  height: 5.3rem;
+}
+
+/**/
+.clients__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.clients__img {
+  width: 17rem;
+  height: 5rem;
+  padding-left: 13rem;
+  padding-bottom: 15.3rem;
+  padding-top: 5rem;
+}
+
+/*Стилизуем карточки*/
+
+.card__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 40%;
+  flex-wrap: wrap;
+  margin-left: 10rem;
+}
+
+.multiple-feature {
+  display: flex;
+  margin-bottom: 10rem;
+}
+
+.card {
+  background: #FFFFFF;
+  box-shadow: 0px 15px 65px rgba(65, 77, 68, 0.15);
+  border-radius: 1rem;
+  width: 28.2rem;
+  height: 29rem;
+  margin-left: 2rem;
+  margin-bottom: 3rem;
+}
+
+
+.card__icon-one {
+  position: relative;
+  left: 3rem;
+  top: 1.5rem;
+  background: linear-gradient(141.58deg, #FF9A9A 3.63%, #F14C4C 91.45%);
+  mix-blend-mode: normal;
+  box-shadow: 1px 5px 30px rgba(215, 21, 21, 0.5);
+  border-radius: 1rem;
+  width: 7.5rem;
+  height: 7.5rem;
+}
+
+.card__icon-two {
+  position: relative;
+  left: 3rem;
+  top: 1.5rem;
+  background: linear-gradient(154.24deg, #85FED6 4.45%, #4EDAAC 83.73%);
+  background-blend-mode: luminosity;
+  mix-blend-mode: normal;
+  box-shadow: 1px 5px 30px rgba(83, 215, 171, 0.5);
+  border-radius: 1rem;
+  width: 7.5rem;
+  height: 7.5rem;
+}
+
+.card__icon-three {
+  position: relative;
+  left: 3rem;
+  top: 1.5rem;
+  background: linear-gradient(163.65deg, #FCD876 4.69%, #FABC13 88.66%);
+  background-blend-mode: luminosity;
+  mix-blend-mode: normal;
+  box-shadow: 1px 5px 30px rgba(238, 185, 42, 0.6);
+  border-radius: 1rem;
+  width: 7.5rem;
+  height: 7.5rem;
+}
+
+.card__icon-four {
+  position: relative;
+  left: 3rem;
+  top: 1.5rem;
+  background: linear-gradient(143.75deg, #FE9AF4 0%, #EC4EDC 88.72%);
+  background-blend-mode: luminosity;
+  mix-blend-mode: normal;
+  box-shadow: 1px 5px 30px rgba(230, 68, 214, 0.5);
+  border-radius: 1rem;
+  width: 7.5rem;
+  height: 7.5rem;
+}
+
+
+.card__img {
+  width: 3.5rem;
+  height: 3.5rem;
+  padding: 2rem 2rem;
+}
+
+.card__header {
+  font-weight: 600;
+  font-size: 2.1rem;
+  line-height: 3.2rem;
+  color: #021206;
+  opacity: 0.8;
+  padding-right: 4.5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 0.9rem;
+}
+
+.card__subheader {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 160%;
+  color: #021206;
+  opacity: 0.7;
+  padding-left: 3.5rem;
+  padding-right: 2.4rem;
+  padding-bottom: 3.6rem;
+}
+
+.info__right {
+  width: 60%;
+  padding-left: 7.4rem;
+  padding-top: 18rem;
+}
+
+.info__wrap {
+  display: flex;
+}
+
+.info__header {
+  width: 55rem;
+  height: 13.6rem;
+  font-weight: 600;
+  font-size: 4.5rem;
+  line-height: 6.8rem;
+  color: #021206;
+  padding-bottom: 4rem;
+}
+
+.info__subheader {
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 160%;
+  color: #021206;
+  opacity: 0.7;
+  padding-top: 2rem;
+}
+
+.info-button {
+  width: 18.3rem;
+  height: 5.9rem;
+  background: #282323;
+  border-radius: 0.6rem;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 160%;
+  color: #FFFFFF;
+}
+
+.info-link {
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 160%;
+  color: #FF4D4D;
+  padding-left: 3rem;
+  padding-top: 1rem;
+}
+
+.discover {
+  margin-left: 20rem;
+}
+
+.discover__header {
+  max-width: 60rem;
+  font-weight: 600;
+  font-size: 4.5rem;
+  line-height: 6.8rem;
+  color: #021206;
+}
+
+.discover__subheader {
+  max-width: 40rem;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 160%;
+  color: #021206;
+  opacity: 0.7;
+}
+
+.discover__list ul {
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 160%;
+  margin-bottom: 1.6rem;
+  color: #021206;
+  opacity: 0.7;
+}
+
+.servis {
+  margin-left: 20rem;
+  margin-bottom: 20rem;
+}
+
+.servis__header {
+  max-width: 60rem;
+  font-weight: 600;
+  font-size: 4.5rem;
+  line-height: 6.8rem;
+  color: #021206;
+}
+
+.servis__info {
+  max-width: 50rem;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 160%;
+  color: #021206;
+  opacity: 0.7;
+}
+
+.services__button {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 1.5rem 3.3rem;
+  width: 21rem;
+  height: 6rem;
+  background: #F44545;
+  border-radius: 0.6rem;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 160%;
+  color: #FFFFFF;
+}
+
+.laptop__img {
+  max-width: 90rem;
+  max-height: 64rem;
+}
+
+/*Карточки */
+.cards__wrap {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 20rem;
+  margin-bottom: 12rem;
+}
+
+.card__pay {
+  background: #FFFFFF;
+  box-shadow: 0px 15px 65px rgba(65, 77, 68, 0.15);
+  border-radius: 1rem;
+  width: 36rem;
+  height: 60rem;
+  margin-bottom: 2rem;
+  margin-left: 3.8rem;
+}
+
+.card__header {
+  align-items: center;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 170%;
+  text-align: center;
+  color: #021206;
+  opacity: 0.5
+}
+
+.card__buy {
+  font-weight: 600;
+  font-size: 4.3rem;
+  line-height: 100%;
+  text-align: center;
+  color: #021206;
+  padding-top: 3.5rem;
+  padding-bottom: 6rem;
+}
+
+.card__list {
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 160%;
+  color: #021206;
+  opacity: 0.7;
+  margin-top: 4rem;
+}
+
+.pay-button {
+  width: 20rem;
+  height: 6rem;
+  background: #fff;
+  border: 1px solid #F44545;
+  border-radius: 0.6rem;
+  margin-left: 6.1rem;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 170%;
+  text-align: center;
+  color: #F44545;
+  opacity: 0.9;
+}
+
+.pay-services {
+  width: 100%;
+}
+
+.pay__card {
+  display: flex;
+}
+
+.pay__header {
+  font-weight: 600;
+  font-size: 4.5rem;
+  line-height: 6.8rem;
+  color: #021206;
+  margin-left: 60rem;
+}
+
+.pay__subheader {
+  max-width: 75rem;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 170%;
+  text-align: center;
+  color: #021206;
+  opacity: 0.7;
+  margin-left: 46rem;
+  margin-bottom: 3rem;
+}
+
+/*Стилизуем footer*/
+.footer {
+  display: flex;
+  width: 100%;
+  height: 21rem;
+  background: #8EE6C9;
+  opacity: 0.6;
+}
+
+.footer-wrap {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 40rem;
+}
+
+.footer__block {
+  padding-left: 10rem;
+}
+
+.footer-heading {
+  font-weight: 500;
+  font-size: 2.1rem;
+  line-height: 3.2rem;
+  color: #021206;
+  padding-left: 2rem;
+}
+
+.footer-list {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 160%;
+  color: #021206;
+}
+
+/*Делаем Модальное окно*/
